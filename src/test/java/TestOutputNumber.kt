@@ -1,0 +1,4 @@
+class TestOutputNumber {
+    fun testZeroNumber() {
+    }
+}
