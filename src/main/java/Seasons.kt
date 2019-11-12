@@ -1,5 +1,5 @@
-const val numberOfMonth = 10
 fun main() {
+    val numberOfMonth = 10
     print(getSeason(numberOfMonth))
 }
 

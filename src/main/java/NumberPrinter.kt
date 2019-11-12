@@ -11,13 +11,12 @@ val arrayOfHundreds = arrayOf("",
 val arrayOfThousands = arrayOf("", "тысяча")
 
 fun main() {
-    printNumberByWords(num)
+    print(getNumberByWords(num))
 }
 
-private fun printNumberByWords(number: Int) {
+private fun getNumberByWords(number: Int): String {
     if (number !in 1..1000) {
-        print("Ошибка")
-        return
+        return "Ошибка"
     }
     val numberByWords = mutableListOf<String>()
     var newNum = number
@@ -30,5 +29,5 @@ private fun printNumberByWords(number: Int) {
         newNum %= 10
     }
     numberByWords.add(arrayOfTensAndUnits[newNum])
-    print(numberByWords.filter { it != "" }.joinToString(" "))
+    return numberByWords.filter { it != "" }.joinToString(" ")
 }

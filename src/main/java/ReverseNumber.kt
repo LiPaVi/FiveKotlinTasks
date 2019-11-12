@@ -1,5 +1,5 @@
-const val number = 1000
 fun main() {
+    val number = 1000
     print(getReserveNum(number))
 }
 

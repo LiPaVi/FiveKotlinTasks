@@ -1,5 +1,5 @@
-val arrayOfInteger = arrayOf(1, 2, 3, -3, 0, -10)
 fun main() {
+    val arrayOfInteger = arrayOf(1, 2, 3, -3, 0, -10)
     println(arrayWithNegativeFirst(arrayOfInteger).joinToString())
 }
 
