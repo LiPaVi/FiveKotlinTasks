@@ -1,9 +1,14 @@
 const val number = 1000
 fun main() {
-    if (checkCountThree(number)) {
-        print(reverseNum(number))
-    } else print("Ошибка")
+    print(getReserveNum(number))
+}
+
+internal fun getReserveNum(num: Int): String {
+    return when (checkCountThree(num)) {
+        true -> reverseNum(num)
+        false -> "Ошибка"
+    }
 }
 
 private fun checkCountThree(num: Int): Boolean = num in 100..1000
-private fun reverseNum(num: Int): Int = num.toString().reversed().toInt()
+private fun reverseNum(num: Int): String = num.toString().reversed()
