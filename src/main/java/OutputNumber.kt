@@ -1,13 +1,11 @@
 fun main() {
     val input: String? = readLine()
-    printNumber(input)
+    print(checkNumber(input))
 }
 
-private fun printNumber(input: String?) {
-    val integerNumber: Int? = input?.toIntOrNull()
-    if (integerNumber != null) {
-        print("Вы ввели число ${input.toInt()}")
-    } else {
-        print("Ошибка")
+internal fun checkNumber(input: String?): String {
+    return when (input?.toIntOrNull()) {
+        null -> "Ошибка"
+        else -> "Вы ввели число $input"
     }
 }
