@@ -1,4 +1,3 @@
-const val num = 999
 val arrayOfTensAndUnits = arrayOf("",
         "один", "два", "три", "четыре", "пять",
         "шесть", "семь", "восемь", "девять", "десять",
@@ -11,10 +10,11 @@ val arrayOfHundreds = arrayOf("",
 val arrayOfThousands = arrayOf("", "тысяча")
 
 fun main() {
+    val num = 999
     print(getNumberByWords(num))
 }
 
-private fun getNumberByWords(number: Int): String {
+internal fun getNumberByWords(number: Int): String {
     if (number !in 1..1000) {
         return "Ошибка"
     }
